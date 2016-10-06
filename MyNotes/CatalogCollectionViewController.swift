@@ -174,10 +174,12 @@ class CatalogCollectionViewController: UICollectionViewController,UIGestureRecog
     @IBAction func deleteCell(_ sender: AnyObject) {
         if self.cellStating == .nomale {
             self.cellStating = .delete
-            (sender as! UIButton).titleLabel?.text = "列表"
+           // (sender as! UIButton).titleLabel?.text = "列表"
+            (sender as! UIButton).setTitle("列表", for: .normal)
         }else{
             self.cellStating = .nomale
-             (sender as! UIButton).titleLabel?.text = "删除"
+           //  (sender as! UIButton).titleLabel?.text = "删除"
+            (sender as! UIButton).setTitle("删除", for: .normal)
         }
         
         for var decell:UICollectionViewCell in (self.collectionView?.visibleCells)!{
