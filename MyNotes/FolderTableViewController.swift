@@ -91,8 +91,6 @@ class FolderTableViewController: UITableViewController {
 
     //MARK:后台下载网页内容
     func backgroundLoadHtml(mode:FileModel) {
-        
-        
         http.requestWithUrl(type: .get, url: mode.url, parameters: nil, success: {(data) in
             let path = self.fileManager.creatHtmlFile(name: mode.url, data: (data as! String))
             if path != nil {
