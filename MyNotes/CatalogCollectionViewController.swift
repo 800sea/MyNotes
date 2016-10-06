@@ -17,7 +17,7 @@ class CatalogCollectionViewController: UICollectionViewController,UIGestureRecog
     var data = Array<FolderModel>(){
         didSet{
             //添加 默认的按钮的那个数据
-            data.append(FolderModel(key: "", title: "默认", bg: "bg", childer: nil, time: nil))
+            data.append(FolderModel(key: "", title: "添加", bg: "bg", childer: nil, time: nil))
             self.collectionView?.reloadData()
         }
     }

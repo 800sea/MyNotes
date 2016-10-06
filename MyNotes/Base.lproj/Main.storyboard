@@ -105,7 +105,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NT6-zu-18H" id="Thq-5D-Sxa">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gC1-x1-yTC">
@@ -124,7 +124,7 @@
                                 <connections>
                                     <outlet property="pic" destination="BcP-Xl-W1d" id="P7Y-dh-sV2"/>
                                     <outlet property="title" destination="gC1-x1-yTC" id="lnn-lX-9MC"/>
-                                    <segue destination="es7-VQ-hvW" kind="show" id="R41-Hd-tNP"/>
+                                    <segue destination="es7-VQ-hvW" kind="show" identifier="fileList" id="R41-Hd-tNP"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -135,7 +135,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="ArV-tf-YEd">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Xjd-q0-N1a">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0SH-s3-UVs">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0SH-s3-UVs">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="新建"/>
@@ -156,6 +156,7 @@
         <!--jjj-->
         <scene sceneID="4Xe-uo-tPe">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mIW-0R-xEL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="jjj" id="es7-VQ-hvW" customClass="FileViewController" customModule="MyNotes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ggg-Xa-cnJ"/>
@@ -164,24 +165,11 @@
                     <view key="view" contentMode="scaleToFill" id="at9-iE-Fe7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wl9-pD-Mvf">
-                                <color key="backgroundColor" red="0.87254901960784315" green="0.95195126726723434" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </webView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Wl9-pD-Mvf" firstAttribute="leading" secondItem="at9-iE-Fe7" secondAttribute="leadingMargin" id="6qs-cJ-sQP"/>
-                            <constraint firstItem="Wl9-pD-Mvf" firstAttribute="trailing" secondItem="at9-iE-Fe7" secondAttribute="trailingMargin" id="B82-c6-uhL"/>
-                            <constraint firstItem="fMF-bp-VBN" firstAttribute="top" secondItem="Wl9-pD-Mvf" secondAttribute="bottom" constant="8" symbolic="YES" id="fe6-XG-0Br"/>
-                            <constraint firstItem="Wl9-pD-Mvf" firstAttribute="top" secondItem="Ggg-Xa-cnJ" secondAttribute="bottom" constant="8" symbolic="YES" id="rVF-fF-fgm"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="webView" destination="Wl9-pD-Mvf" id="yWj-46-qob"/>
-                    </connections>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mIW-0R-xEL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3016.8000000000002" y="135.38230884557723"/>
         </scene>

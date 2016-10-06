@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,12 +17,57 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDv-p6-j5m">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URe-kw-CVy">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="亲笔记" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEz-li-ecJ">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="Y7Z-1y-L9y"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="随时随地随便记——亲笔记" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgp-XA-lDK">
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="JEz-li-ecJ" secondAttribute="trailing" constant="20" symbolic="YES" id="2Dk-zo-qrG"/>
+                                            <constraint firstItem="Vgp-XA-lDK" firstAttribute="top" secondItem="JEz-li-ecJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Q3r-y6-1VT"/>
+                                            <constraint firstItem="Vgp-XA-lDK" firstAttribute="leading" secondItem="URe-kw-CVy" secondAttribute="leading" id="TCT-8Z-KcL"/>
+                                            <constraint firstItem="JEz-li-ecJ" firstAttribute="top" secondItem="URe-kw-CVy" secondAttribute="top" constant="20" symbolic="YES" id="Wwb-hb-RXB"/>
+                                            <constraint firstAttribute="bottom" secondItem="Vgp-XA-lDK" secondAttribute="bottom" constant="8" id="cew-HI-9ON"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vgp-XA-lDK" secondAttribute="trailing" id="eO5-hP-gaN"/>
+                                            <constraint firstItem="JEz-li-ecJ" firstAttribute="centerX" secondItem="Vgp-XA-lDK" secondAttribute="centerX" id="m6q-DS-cte"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98140066862106323" green="0.93713480234146118" blue="0.93661874532699585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="URe-kw-CVy" firstAttribute="centerY" secondItem="GDv-p6-j5m" secondAttribute="centerY" id="8kM-DB-ELB"/>
+                                    <constraint firstAttribute="trailing" secondItem="URe-kw-CVy" secondAttribute="trailing" constant="20" id="WvB-dP-S4a"/>
+                                    <constraint firstItem="URe-kw-CVy" firstAttribute="leading" secondItem="GDv-p6-j5m" secondAttribute="leading" constant="20" id="Xn3-Hj-mnG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GDv-p6-j5m" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="6tA-QH-neB"/>
+                            <constraint firstItem="GDv-p6-j5m" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="GGv-wm-NGz"/>
+                            <constraint firstAttribute="trailing" secondItem="GDv-p6-j5m" secondAttribute="trailing" id="esc-h1-fjW"/>
+                            <constraint firstItem="GDv-p6-j5m" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="gT8-Fe-djM"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
 </document>

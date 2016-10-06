@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		46061E03AB589705A86872A8 /* Pods_MyNotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84959AD1D95F0EC91FC18008 /* Pods_MyNotes.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		920EC7AB1DA3BE0300E9EBE8 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 920EC7AA1DA3BE0300E9EBE8 /* Masonry.framework */; };
 		92113C6D1D8F796A00919367 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92113C6C1D8F796A00919367 /* AppDelegate.swift */; };
 		92113C721D8F796A00919367 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92113C701D8F796A00919367 /* Main.storyboard */; };
 		92113C741D8F796A00919367 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92113C731D8F796A00919367 /* Assets.xcassets */; };
@@ -18,9 +19,11 @@
 		92113C9F1D8FC95600919367 /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92113C9E1D8FC95600919367 /* Catalog.swift */; };
 		92113CA61D90110700919367 /* CatalogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92113CA51D90110700919367 /* CatalogCollectionViewCell.swift */; };
 		9211B0CB1D9A4C09002F39A0 /* FileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9211B0CA1D9A4C09002F39A0 /* FileViewController.swift */; };
+		92123A711D9E98EF0041A738 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92123A701D9E98EF0041A738 /* NoteView.swift */; };
 		9212A6E71D95202F00007CEA /* DBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9212A6E61D95202F00007CEA /* DBClient.swift */; };
 		921771981D9216F000904B64 /* RootCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921771971D9216EF00904B64 /* RootCollectionTests.swift */; };
 		9217BD1B1D98079A00CF60E4 /* FolderTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9217BD1A1D98079A00CF60E4 /* FolderTable.swift */; };
+		9218FD201DA09C30002BFF28 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9218FD1F1DA09C30002BFF28 /* RoundView.swift */; };
 		921A97221D90CA2D000CF924 /* FolderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921A97211D90CA2D000CF924 /* FolderTableViewController.swift */; };
 		921A97251D912C9E000CF924 /* LlPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921A97241D912C9E000CF924 /* LlPrint.swift */; };
 		921A97271D915A60000CF924 /* EditFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921A97261D915A60000CF924 /* EditFolderViewController.swift */; };
@@ -29,7 +32,6 @@
 		924F9C951D9CB5D700BC2A3F /* Filelist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F9C941D9CB5D700BC2A3F /* Filelist.swift */; };
 		924F9C971D9D2F3900BC2A3F /* FileManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F9C961D9D2F3900BC2A3F /* FileManage.swift */; };
 		92D6B02E1D98B3EB005A058A /* HttpTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D6B02D1D98B3EB005A058A /* HttpTool.swift */; };
-		92D6B0341D98B664005A058A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D6B0331D98B664005A058A /* Alamofire.framework */; };
 		C3EBC63F64B9FBB9F7F9014F /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA838105F6A27D68E3CB04B /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,7 @@
 		84959AD1D95F0EC91FC18008 /* Pods_MyNotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyNotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D2F19D282F12936A633001 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8EA838105F6A27D68E3CB04B /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		920EC7AA1DA3BE0300E9EBE8 /* Masonry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Masonry.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/MyNotes-hacgixtvmswkbjdlhunoiwjxujpg/Build/Products/Debug-iphonesimulator/Masonry.framework"; sourceTree = "<group>"; };
 		92113C691D8F796A00919367 /* MyNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92113C6C1D8F796A00919367 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92113C711D8F796A00919367 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,10 +74,12 @@
 		92113C9E1D8FC95600919367 /* Catalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
 		92113CA51D90110700919367 /* CatalogCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogCollectionViewCell.swift; sourceTree = "<group>"; };
 		9211B0CA1D9A4C09002F39A0 /* FileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
+		92123A701D9E98EF0041A738 /* NoteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		9212A6E61D95202F00007CEA /* DBClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBClient.swift; sourceTree = "<group>"; };
 		921771971D9216EF00904B64 /* RootCollectionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootCollectionTests.swift; sourceTree = "<group>"; };
 		921771991D92532200904B64 /* Note-Brigding-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Note-Brigding-Header.h"; sourceTree = "<group>"; };
 		9217BD1A1D98079A00CF60E4 /* FolderTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderTable.swift; sourceTree = "<group>"; };
+		9218FD1F1DA09C30002BFF28 /* RoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		921A97211D90CA2D000CF924 /* FolderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderTableViewController.swift; sourceTree = "<group>"; };
 		921A97241D912C9E000CF924 /* LlPrint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LlPrint.swift; sourceTree = "<group>"; };
 		921A97261D915A60000CF924 /* EditFolderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditFolderViewController.swift; sourceTree = "<group>"; };
@@ -93,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92D6B0341D98B664005A058A /* Alamofire.framework in Frameworks */,
+				920EC7AB1DA3BE0300E9EBE8 /* Masonry.framework in Frameworks */,
 				C3EBC63F64B9FBB9F7F9014F /* Pods.framework in Frameworks */,
 				46061E03AB589705A86872A8 /* Pods_MyNotes.framework in Frameworks */,
 			);
@@ -196,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				92113CA51D90110700919367 /* CatalogCollectionViewCell.swift */,
+				9218FD1E1DA09BF9002BFF28 /* NoteView */,
 				921BE76A1D941F9400C74C1B /* FolderTableViewCell.swift */,
 			);
 			name = View;
@@ -218,6 +224,15 @@
 				92113C701D8F796A00919367 /* Main.storyboard */,
 			);
 			name = StoryBoard;
+			sourceTree = "<group>";
+		};
+		9218FD1E1DA09BF9002BFF28 /* NoteView */ = {
+			isa = PBXGroup;
+			children = (
+				92123A701D9E98EF0041A738 /* NoteView.swift */,
+				9218FD1F1DA09C30002BFF28 /* RoundView.swift */,
+			);
+			name = NoteView;
 			sourceTree = "<group>";
 		};
 		921A97231D912C7C000CF924 /* Tool */ = {
@@ -244,6 +259,7 @@
 		B79266A3D7A457A062D81829 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				920EC7AA1DA3BE0300E9EBE8 /* Masonry.framework */,
 				92D6B0331D98B664005A058A /* Alamofire.framework */,
 				92D6B0311D98B64E005A058A /* FMDB.framework */,
 				92D6B02F1D98B421005A058A /* Alamofire.framework */,
@@ -447,6 +463,7 @@
 				9217BD1B1D98079A00CF60E4 /* FolderTable.swift in Sources */,
 				92113C9C1D8FB57600919367 /* CatalogCollectionViewController.swift in Sources */,
 				921BE76B1D941F9400C74C1B /* FolderTableViewCell.swift in Sources */,
+				9218FD201DA09C30002BFF28 /* RoundView.swift in Sources */,
 				921A97221D90CA2D000CF924 /* FolderTableViewController.swift in Sources */,
 				92113C6D1D8F796A00919367 /* AppDelegate.swift in Sources */,
 				92D6B02E1D98B3EB005A058A /* HttpTool.swift in Sources */,
@@ -454,6 +471,7 @@
 				921BE7691D93E35700C74C1B /* FolderModel.swift in Sources */,
 				921A97271D915A60000CF924 /* EditFolderViewController.swift in Sources */,
 				924F9C951D9CB5D700BC2A3F /* Filelist.swift in Sources */,
+				92123A711D9E98EF0041A738 /* NoteView.swift in Sources */,
 				92113C9F1D8FC95600919367 /* Catalog.swift in Sources */,
 				9212A6E71D95202F00007CEA /* DBClient.swift in Sources */,
 				924F9C971D9D2F3900BC2A3F /* FileManage.swift in Sources */,
@@ -626,6 +644,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyNotes/Note-Brigding-Header.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -646,6 +665,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyNotes/Note-Brigding-Header.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

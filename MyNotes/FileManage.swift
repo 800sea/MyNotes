@@ -11,17 +11,27 @@ import Foundation
 class FileManage: NSObject {
     
     //library文档目录
-    let documentPath = NSHomeDirectory() + "/Documents"
+    static let documentPath = NSHomeDirectory() + "/Documents"
     //MARK:文件夹创建
     func creatFolder(path:String) -> Bool {
         
         return true
     }
     
+    
     //MARK:文件新建
-    func creatFile(path:String) -> Bool {
+    func creatHtmlFile(name:String,data:String) -> String? {
+        let path = Tool.MD5Str(str: name) + ".html"
+        let file = NSURL.fileURL(withPath: (FileManage.documentPath+"/"+path))
+        //Tool.log(file)
+        do {
+            try data.write(to: file, atomically: true, encoding: String.Encoding.utf8)
+        } catch {
+            Tool.log("写入错误")
+            return nil
+        }
         
-        return true
+        return path
     }
     
     //MARK:文件删除

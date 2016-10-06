@@ -15,11 +15,14 @@ class FolderTableViewController: UITableViewController {
     open var folderData:FolderModel?
     fileprivate var data = [FileModel](){
         didSet{
+            Tool.log("tableVewData:=\(data)")
             self.tableView.reloadData()
         }
     }
     let folderTable = FolderTable()
-    let filelist  = FileList()
+    let http = HttpTool()
+    let fileManager = FileManage()
+    
     @IBOutlet weak var navItem: UINavigationItem!
     
     struct myStoryBoard {
@@ -30,7 +33,7 @@ class FolderTableViewController: UITableViewController {
         super.viewDidLoad()
         self.navItem.title = folderData?.title!
         self.tableView.backgroundColor = Tool.getBgColor(.A)
-        self.getData()
+        self.getData(parent: (folderData?.key)!)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -38,8 +41,8 @@ class FolderTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    func getData() {
-        self.data = folderTable.getFolderData()
+    func getData(parent:String) {
+        self.data = folderTable.getFolderData(parent: parent)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -60,7 +63,7 @@ class FolderTableViewController: UITableViewController {
         view.addAction(UIAlertAction.init(title: "确定", style: .default, handler: { (action) in
             let a = view.textFields?.first?.text!
             let b = view.textFields?[1].text!
-            let cellData = FileModel(key: "", title: a!, cont: "", url: b!, fileTime: nil, updateTime: nil)
+            let cellData = FileModel(key: "", title: a!, cont: "", url: b!, fileTime: nil, updateTime: nil,parentId:(self.folderData?.key)!,remark: "")
             self.creatFile(data: cellData)
         }))
          
@@ -73,20 +76,41 @@ class FolderTableViewController: UITableViewController {
        let temp = folderTable.addFolderData(data)
         if temp {
             Tool.log("添加成功！")
-            self.getData()
-            self.backgroundLoadHtml(str: data.url)
+            self.getData(parent: (folderData?.key)!)
+            // 把当前的文件 查询出来 得到key
+            let modeData = folderTable.getTagetFolderData(mode: data)
+            if modeData.count > 0 {
+                self.backgroundLoadHtml(mode: modeData[0])
+            }
+            
         }else{
             Tool.log("添加失败！")
         }
     }
     
+
     //MARK:后台下载网页内容
-    func backgroundLoadHtml(str:String) {
-       let temp = filelist.loadHtml(url: str)
-        if temp {
-            //如果网页内容下载成功 就把网页文件地址存到 folder数据表中
+    func backgroundLoadHtml(mode:FileModel) {
+        
+        
+        http.requestWithUrl(type: .get, url: mode.url, parameters: nil, success: {(data) in
+            let path = self.fileManager.creatHtmlFile(name: mode.url, data: (data as! String))
+            if path != nil {
+                Tool.log("创建成功")
+                
+                var modea = mode
+                modea.cont = path!
+                Tool.log(modea.cont)
+                if self.folderTable.updateFolderData(modea){
+                    Tool.log("数据更新成功")
+                    
+                }else{
+                    Tool.log("数据更新失败")
+                }
+            }
+        }) { (e) in
+            Tool.log(e)
             
-            Tool.log("asd")
         }
     }
     // MARK: - Table view data source
@@ -115,7 +139,20 @@ class FolderTableViewController: UITableViewController {
         return true
     }
  
-
+    //MARK:删除cell
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete{
+            //执行删除数据
+            let cell = tableView.cellForRow(at: indexPath) as! FolderTableViewCell
+            if  folderTable.deleteFolderData((cell.model?.key)!){
+                getData(parent: (folderData?.key)!)
+            }
+            
+        }
+    }
+    override func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "删除"
+    }
     /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -143,14 +180,23 @@ class FolderTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "fileList" {
+            let vc = segue.destination as! FileViewController
+            let cell = tableView(tableView, cellForRowAt: tableView.indexPathForSelectedRow!)
+            vc.fileData = (cell as! FolderTableViewCell).model!
+        }
     }
-    */
+    
+//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+//        if identifier == "fileList" {
+//            
+//        }
+//        return true
+//    }
+ 
 
 }

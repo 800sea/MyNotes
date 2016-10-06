@@ -18,12 +18,21 @@ struct FolderModel {
 }
 
 // File 的数据模型
+// key 关键字
+// cont 网页的本地路径
+// url 网络路径
+// fileTime 内容创建时间
+// updateTime 最新的内容更新时间
+// parentId 父级folder目录的id
+// remark 用户编辑的内容
+
 struct FileModel {
-    var key:String = ""
+    var key:String! = ""
     var title:String = ""
     var cont:String = ""
     var url:String = ""
     var fileTime:Date? = nil
     var updateTime:Date? = nil
-    
+    var parentId:String = ""
+    var remark:String = ""
 }

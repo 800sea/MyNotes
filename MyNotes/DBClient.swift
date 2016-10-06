@@ -59,7 +59,14 @@ class DBClient: NSObject {
             // 对应文件内容表
             if !db!.tableExists(tbales.fileList.rawValue){
                 // 创建表
-                let sql2 = "create table if not exists \(tbales.fileList)(id integer primary key,title text, cont text,url text,fileTime text,updateTime text)"
+                // key 关键字  
+                // cont 网页的本地路径
+                // url 网络路径
+                // fileTime 内容创建时间
+                // updateTime 最新的内容更新时间
+                // parentId 父级folder目录的id
+                // remark 用户编辑的内容
+                let sql2 = "create table if not exists \(tbales.fileList)(id integer primary key,title text, cont text,url text,fileTime text,updateTime text,parentId text,remark text)"
                 let temp2 = db?.executeUpdate(sql2, withArgumentsIn: nil)
                 if temp2!{
                     Tool.log("创建\(tbales.fileList)表成功！")

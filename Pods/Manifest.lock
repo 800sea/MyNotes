@@ -1,0 +1,40 @@
+PODS:
+  - Alamofire (4.0.1)
+  - CocoaLumberjack (2.2.0):
+    - CocoaLumberjack/Default (= 2.2.0)
+    - CocoaLumberjack/Extensions (= 2.2.0)
+  - CocoaLumberjack/Core (2.2.0)
+  - CocoaLumberjack/Default (2.2.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.2.0):
+    - CocoaLumberjack/Default
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/FTS (2.6.2):
+    - FMDB/standard
+  - FMDB/standard (2.6.2)
+  - Masonry (1.0.2)
+  - NSObject-SafeExpectations (0.0.2)
+  - WordPress-iOS-Editor (1.8.1):
+    - CocoaLumberjack (~> 2.2.0)
+    - NSObject-SafeExpectations (~> 0.0.2)
+    - WordPressCom-Analytics-iOS (~> 0.1.0)
+  - WordPressCom-Analytics-iOS (0.1.19)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - FMDB
+  - FMDB/FTS
+  - Masonry
+  - WordPress-iOS-Editor
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  NSObject-SafeExpectations: 7d7f48df90df4e11da7cfe86b64f45eff7a7f521
+  WordPress-iOS-Editor: 3118f5d6b142b6bf322f3393a7dd98a28bca68cb
+  WordPressCom-Analytics-iOS: 1b01177ee3f588e984465b5b37ebcbb342836a8d
+
+COCOAPODS: 0.38.2
