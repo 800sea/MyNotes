@@ -23,8 +23,12 @@ class FileViewController: UIViewController,UITextViewDelegate {
         // 判断当前view的html 是否已经生成
         selectData(mode: fileData)
         loadingView.hidesWhenStopped = true
-        let note = NoteView.init(frame: CGRect.init(x: 200, y: 300, width: 200, height: 60))
+        let note = NoteView.init(frame: CGRect.init(x:  self.view.bounds.width-30, y: self.view.bounds.width, width: 60, height: 60))
+        
+//        let  a = NSLayoutConstraint.constraints(withVisualFormat: <#T##String#>, options: <#T##NSLayoutFormatOptions#>, metrics: <#T##[String : Any]?#>, views: <#T##[String : Any]#>)
+        
         self.view.addSubview(note)
+        
     }
     
     func selectData(mode:FileModel){

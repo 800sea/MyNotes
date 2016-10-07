@@ -21,6 +21,9 @@
 		9211B0CB1D9A4C09002F39A0 /* FileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9211B0CA1D9A4C09002F39A0 /* FileViewController.swift */; };
 		92123A711D9E98EF0041A738 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92123A701D9E98EF0041A738 /* NoteView.swift */; };
 		9212A6E71D95202F00007CEA /* DBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9212A6E61D95202F00007CEA /* DBClient.swift */; };
+		9212F9931DA77D490049AFF1 /* TextEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9212F9921DA77D490049AFF1 /* TextEditorViewController.swift */; };
+		9212F9951DA77DA50049AFF1 /* WordPressEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9212F9941DA77DA50049AFF1 /* WordPressEditor.framework */; };
+		9212F9971DA77E450049AFF1 /* WordPressComAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9212F9961DA77E450049AFF1 /* WordPressComAnalytics.framework */; };
 		921771981D9216F000904B64 /* RootCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921771971D9216EF00904B64 /* RootCollectionTests.swift */; };
 		9217BD1B1D98079A00CF60E4 /* FolderTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9217BD1A1D98079A00CF60E4 /* FolderTable.swift */; };
 		9218FD201DA09C30002BFF28 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9218FD1F1DA09C30002BFF28 /* RoundView.swift */; };
@@ -76,6 +79,9 @@
 		9211B0CA1D9A4C09002F39A0 /* FileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
 		92123A701D9E98EF0041A738 /* NoteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		9212A6E61D95202F00007CEA /* DBClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBClient.swift; sourceTree = "<group>"; };
+		9212F9921DA77D490049AFF1 /* TextEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextEditorViewController.swift; sourceTree = "<group>"; };
+		9212F9941DA77DA50049AFF1 /* WordPressEditor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WordPressEditor.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/MyNotes-hacgixtvmswkbjdlhunoiwjxujpg/Build/Products/Debug-iphonesimulator/WordPressEditor.framework"; sourceTree = "<group>"; };
+		9212F9961DA77E450049AFF1 /* WordPressComAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WordPressComAnalytics.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/MyNotes-hacgixtvmswkbjdlhunoiwjxujpg/Build/Products/Debug-iphonesimulator/WordPressComAnalytics.framework"; sourceTree = "<group>"; };
 		921771971D9216EF00904B64 /* RootCollectionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootCollectionTests.swift; sourceTree = "<group>"; };
 		921771991D92532200904B64 /* Note-Brigding-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Note-Brigding-Header.h"; sourceTree = "<group>"; };
 		9217BD1A1D98079A00CF60E4 /* FolderTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderTable.swift; sourceTree = "<group>"; };
@@ -98,6 +104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9212F9971DA77E450049AFF1 /* WordPressComAnalytics.framework in Frameworks */,
+				9212F9951DA77DA50049AFF1 /* WordPressEditor.framework in Frameworks */,
 				920EC7AB1DA3BE0300E9EBE8 /* Masonry.framework in Frameworks */,
 				C3EBC63F64B9FBB9F7F9014F /* Pods.framework in Frameworks */,
 				46061E03AB589705A86872A8 /* Pods_MyNotes.framework in Frameworks */,
@@ -214,6 +222,7 @@
 				9211B0CA1D9A4C09002F39A0 /* FileViewController.swift */,
 				92113C9B1D8FB57600919367 /* CatalogCollectionViewController.swift */,
 				921A97261D915A60000CF924 /* EditFolderViewController.swift */,
+				9212F9921DA77D490049AFF1 /* TextEditorViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -259,6 +268,8 @@
 		B79266A3D7A457A062D81829 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9212F9961DA77E450049AFF1 /* WordPressComAnalytics.framework */,
+				9212F9941DA77DA50049AFF1 /* WordPressEditor.framework */,
 				920EC7AA1DA3BE0300E9EBE8 /* Masonry.framework */,
 				92D6B0331D98B664005A058A /* Alamofire.framework */,
 				92D6B0311D98B64E005A058A /* FMDB.framework */,
@@ -468,6 +479,7 @@
 				92113C6D1D8F796A00919367 /* AppDelegate.swift in Sources */,
 				92D6B02E1D98B3EB005A058A /* HttpTool.swift in Sources */,
 				9211B0CB1D9A4C09002F39A0 /* FileViewController.swift in Sources */,
+				9212F9931DA77D490049AFF1 /* TextEditorViewController.swift in Sources */,
 				921BE7691D93E35700C74C1B /* FolderModel.swift in Sources */,
 				921A97271D915A60000CF924 /* EditFolderViewController.swift in Sources */,
 				924F9C951D9CB5D700BC2A3F /* Filelist.swift in Sources */,

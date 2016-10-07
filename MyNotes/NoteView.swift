@@ -25,13 +25,9 @@ class NoteView: UIView,RoundDeletage {
     var textViewStyle:Bool = false //textView的展开状态 默认没有出现
     override init(frame:CGRect){
         super.init(frame:frame)
-        //self.backgroundColor = UIColor.blue
         creatRound()
         roundView?.delete = self
-        //self.backgroundColor = UIColor.black
         self.layer.anchorPoint = CGPoint.init(x: 1, y: 0)
-       // self.addSubview(bgView)
-        //self.insertSubview(bgView, at: 0)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -54,13 +50,12 @@ class NoteView: UIView,RoundDeletage {
         textView.frame = CGRect.init(x: 0, y: 0, width: 200, height: 100)
         textView.center = (roundView?.center)!
         textView.font = UIFont.boldSystemFont(ofSize: 16)
-        textView.backgroundColor = UIColor.init(white: 1, alpha: 0.8)
-//        textView.returnKeyType = .default
-//        textView.keyboardType = .default
+        textView.backgroundColor = Tool.getBgColor(.A)
+
         //text 自适应高度
         textView.autoresizingMask = .flexibleHeight
         textView.text = "24234234"
-        //textView.layer.anchorPoint = CGPoint.init(x: 1, y: 0)
+        textView.layer.anchorPoint = CGPoint.init(x: 1, y: 0)
        // textView.textContainerInset = UIEdgeInsetsMake(10, 5, 5, 20)
         //显示内容
         //self.setNeedsDisplay()
