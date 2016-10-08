@@ -105,7 +105,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NT6-zu-18H" id="Thq-5D-Sxa">
-                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gC1-x1-yTC">
@@ -205,8 +205,37 @@
                     <view key="view" contentMode="scaleToFill" id="A3J-Eo-sg1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kyX-6n-VaS">
+                                <color key="backgroundColor" red="1" green="0.92114047720186554" blue="0.74480062031321415" alpha="1" colorSpace="calibratedRGB"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kyX-6n-VaS" firstAttribute="top" secondItem="hhs-vd-Yq4" secondAttribute="bottom" constant="8" symbolic="YES" id="1Ki-eE-XS2"/>
+                            <constraint firstItem="Ntz-NX-Mrm" firstAttribute="top" secondItem="kyX-6n-VaS" secondAttribute="bottom" constant="324" id="6Oh-4T-Fpg"/>
+                            <constraint firstItem="kyX-6n-VaS" firstAttribute="leading" secondItem="A3J-Eo-sg1" secondAttribute="leadingMargin" id="BvM-ST-2mL"/>
+                            <constraint firstItem="kyX-6n-VaS" firstAttribute="trailing" secondItem="A3J-Eo-sg1" secondAttribute="trailingMargin" id="FTb-Tj-asu"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="kxR-sO-1gl">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="KvI-TL-4Gt">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Nxv-Pn-XUf">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="保存"/>
+                                <connections>
+                                    <action selector="saveFuc:" destination="XgS-LW-e3X" eventType="touchUpInside" id="0zf-kK-CRL"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="contView" destination="kyX-6n-VaS" id="126-5F-KK8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jiy-69-sUm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

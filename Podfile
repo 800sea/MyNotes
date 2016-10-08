@@ -7,9 +7,10 @@ pod 'FMDB/FTS'   # FMDB with FTS
 #代码布局框架
 pod 'Masonry'
 #富文本编辑器
-platform :ios, '9.0'
-pod 'WordPress-iOS-Editor'
-
+#platform :ios, '9.0'
+#//pod 'WordPress-iOS-Editor'
+#文本编辑器
+pod 'YYText'
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '10.0'
 use_frameworks!

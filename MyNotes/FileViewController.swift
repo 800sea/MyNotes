@@ -25,8 +25,6 @@ class FileViewController: UIViewController,UITextViewDelegate {
         loadingView.hidesWhenStopped = true
         let note = NoteView.init(frame: CGRect.init(x:  self.view.bounds.width-30, y: self.view.bounds.width, width: 60, height: 60))
         
-//        let  a = NSLayoutConstraint.constraints(withVisualFormat: <#T##String#>, options: <#T##NSLayoutFormatOptions#>, metrics: <#T##[String : Any]?#>, views: <#T##[String : Any]#>)
-        
         self.view.addSubview(note)
         
     }
