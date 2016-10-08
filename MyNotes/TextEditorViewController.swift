@@ -16,7 +16,8 @@ class TextEditorViewController: UIViewController,UITextViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        contView.backgroundColor = Tool.getBgColor(.A)
+        self.view.backgroundColor = Tool.getBgColor(.A)
+        contView.backgroundColor = UIColor.clear
         //继承UIScrollView的控件都会受到UIViewController的这个automaticallyAdjustsScrollViewInsets属性的影响.
         // 默认为YES,
         //当有navigationbar的时候,UITextView的表现就是上面空白.
