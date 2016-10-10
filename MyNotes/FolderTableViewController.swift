@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FolderTableViewController: UITableViewController {
+class FolderTableViewController: UITableViewController,UITextFieldDelegate {
     
     open var iad:String?
     //父级cell的数据
@@ -58,6 +58,10 @@ class FolderTableViewController: UITableViewController {
         }
         view.addTextField { (text) in
             text.placeholder = "链接地址"
+            text.delegate = self
+            // 判断填写的地址是否合法
+            //folderTable.urlIsTure(url: t)
+            
         }
         view.addAction(UIAlertAction.init(title: "取消", style: .cancel))
         view.addAction(UIAlertAction.init(title: "确定", style: .default, handler: { (action) in
@@ -70,6 +74,12 @@ class FolderTableViewController: UITableViewController {
         self.present(view, animated: true) { 
             
         }
+    }
+    
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        Tool.log("------\(textField.text!)")
+        
     }
     //MARK: 新建file
     func creatFile(data:FileModel) {

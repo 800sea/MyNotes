@@ -47,7 +47,7 @@ class NoteView: UIView,RoundDeletage {
         addTextView()
     }
     func addTextView(){
-        textView.frame = CGRect.init(x: 0, y: 0, width: 200, height: 100)
+        textView.frame = CGRect.init(x: 0, y: 0, width: 1, height: 1)
         textView.center = (roundView?.center)!
         textView.font = UIFont.boldSystemFont(ofSize: 16)
         textView.backgroundColor = Tool.getBgColor(.A)

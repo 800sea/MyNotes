@@ -121,4 +121,12 @@ class FolderTable: NSObject {
         Tool.log(dataArr)
         return dataArr
     }
+    //判断传入的字符串是否符合 网络地址
+    func urlIsTure(url:String) -> Bool{
+        let  re = "^(?i)(https?:"+"//)?(www|mail)" + "(/[^/]+)*$"
+        //if let match = url.rangeOfString(re, options: .RegularExpressionSearch) {
+          //  println("\(url) is probably polish")
+        //}
+        return true
+    }
 }

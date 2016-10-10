@@ -23,11 +23,23 @@ class FileViewController: UIViewController,UITextViewDelegate {
         // 判断当前view的html 是否已经生成
         selectData(mode: fileData)
         loadingView.hidesWhenStopped = true
-        let note = NoteView.init(frame: CGRect.init(x:  self.view.bounds.width-30, y: self.view.bounds.width, width: 60, height: 60))
-        
+        let note = NoteView.init(frame: CGRect.init(x:  0, y: 0, width: 60, height: 60))
         self.view.addSubview(note)
-        
+        note.translatesAutoresizingMaskIntoConstraints = false
+
+        noteView(view:note)
     }
+    //圆形点击区域布局
+    func noteView(view:UIView){
+        let centerY = view.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0)
+        let right   = view.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: 0)
+        let width   = view.widthAnchor.constraint(equalToConstant: 60)
+        let height  = view.heightAnchor.constraint(equalToConstant: 60)
+        
+        NSLayoutConstraint.activate([centerY,right,width,height])
+        view.layoutIfNeeded()
+    }
+
     
     func selectData(mode:FileModel){
         selectNum += 1
