@@ -55,7 +55,7 @@ class CatalogViewController: UIViewController,UICollectionViewDelegate, UICollec
         getFolderData()
         self.view.backgroundColor = Tool.getBgColor(.A)
         self.automaticallyAdjustsScrollViewInsets = false
-        //addGesture()
+        addGesture()
     }
 
     //获取当前用户的文件夹列表
@@ -193,24 +193,17 @@ class CatalogViewController: UIViewController,UICollectionViewDelegate, UICollec
                 self.targetEditCell!.image.image = UIImage.init(named: "icon_\(index).png")
                 //保存 bg图片名
                 self.targetEditCell!.dataModel?.bg = "icon_\(index).png"
-                
             }
-
         }
-       
-//        iconListView = IconList(inView: view)
-//        iconListView.selectItem = {index in
-//        print("add \(index)")
-//                   // self.items.append(index)
-//                   // self.tableView.reloadData()
-//                    //self.actionToggleMenu(self)
-//        }
-//        self.view.addSubview(iconListView)
     }
 //    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 //        targetEditCell?.titleText.resignFirstResponder()
 //    }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true;
+    }
     //点击添加cell的按钮
     func addCell() {
         let alertView = UIAlertController.init(title: "添加分类", message: "", preferredStyle: .alert)
@@ -231,6 +224,50 @@ class CatalogViewController: UIViewController,UICollectionViewDelegate, UICollec
         }
         
     }
+    //MARK:添加长按手势
+    func addGesture() {
+        let gesture = UILongPressGestureRecognizer.init(target: self, action: #selector(cellLongGesture(_:)))
+        gesture.minimumPressDuration = 1.0
+        gesture.delegate = self
+        gesture.delaysTouchesBegan = true
+        self.collectionView?.addGestureRecognizer(gesture)
+    }
+    
+    //触发长按手势 弹出 alertView视图确定是否删除cell
+    func cellLongGesture(_ gesture:UILongPressGestureRecognizer) {
+        if gesture.state != .ended {
+            return
+        }
+        let point = gesture.location(in: self.collectionView)
+        let indexPath = self.collectionView?.indexPathForItem(at: point)
+        
+        if indexPath != nil {
+            let targetCell = self.collectionView?.cellForItem(at: indexPath!)
+            // 获取到当前点击的cell
+            //setFoldercell((targetCell as! CatalogCollectionViewCell))
+            deleteFolderCell(key: (targetCell as! CatalogCollectionViewCell).dataModel?.key)
+        }
+    }
+    
+    func deleteFolderCell(key:String!){
+        let editView = EditFolderViewController.init(title: "删除分类", message: "确定要删除选中分类", preferredStyle: .alert)
+        let sureAction = UIAlertAction.init(title: "确定", style: .destructive) { (alert) in
+            if self.catalog.deleteFolderData(String(key)){
+                //self.collectionView?.deleteItems(at: [index])
+                self.getFolderData()
+            }else{
+                Tool.log("删除失败")
+            }
+        }
+        let cancelAction = UIAlertAction.init(title: "取消", style: .cancel)
+
+        editView.addAction(sureAction)
+        editView.addAction(cancelAction)
+        
+        self.present(editView, animated: true) {
+        }
+    }
+    
     //MARK: 文件夹增加
     func addFolder(_ name:FolderModel) {
         if catalog.addFolderData(name){
@@ -238,9 +275,11 @@ class CatalogViewController: UIViewController,UICollectionViewDelegate, UICollec
         }
     }
     //MARK:更新文件夹名 或 背景图片
-    func updateFolder(_ name:String){
-        
-        Tool.log(name)
+    func updateFolder(_ model:FolderModel){
+        if catalog.updateFolderData(model){
+            Tool.log("更新成功")
+        }
+        //Tool.log(name)
     }
 
 
