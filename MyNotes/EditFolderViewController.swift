@@ -17,20 +17,15 @@ class EditFolderViewController: UIAlertController {
     }
     // 原计划添加一个 选择背景的色块  但自定义alterView 失败  后面再试
     func setContentUi() {
-        let a = UIView.init(frame: CGRect.init(x: 0, y: 0, width: 20, height: 20))
-        a.backgroundColor = UIColor.black
+        let iconView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: 100, height: 20))
+        iconView.backgroundColor = UIColor.black
         
         
         let superView = self.view.subviews[0]
-        superView.addSubview(a)
-        Tool.log(superView.subviews)
-        //为理解autolayout 使用手动代码布局
-        let topConstraint = NSLayoutConstraint.init(item: a, attribute: .top, relatedBy: .equal, toItem: superView, attribute: .centerY, multiplier: 1, constant: 0)
-        let leftConstrint = NSLayoutConstraint.init(item: a, attribute: .centerX, relatedBy: .equal, toItem: superView, attribute: .centerX, multiplier: 1, constant: 0)
-        
-        
-        topConstraint.isActive = true
-        leftConstrint.isActive = true
+        superView.addSubview(iconView)
+        ////Tool.log(superView.subviews)
+       // iconView.translatesAutoresizingMaskIntoConstraints = false
+
     }
     
     override func didReceiveMemoryWarning() {

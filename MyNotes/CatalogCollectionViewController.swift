@@ -25,6 +25,7 @@ class CatalogCollectionViewController: UICollectionViewController,UIGestureRecog
     enum cellState:String{
         case nomale   //正常状态
         case delete   //删除状态
+        case edit     //编辑状态
     }
     //cell的当前状态 默认是正常状态
     var cellStating:cellState = .nomale{
@@ -34,9 +35,12 @@ class CatalogCollectionViewController: UICollectionViewController,UIGestureRecog
     }
     
     let catalog = Catalog()
+    var iconListView: IconList!;
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         getFolderData()
         
         self.collectionView?.backgroundColor = Tool.getBgColor(.A)
@@ -107,27 +111,35 @@ class CatalogCollectionViewController: UICollectionViewController,UIGestureRecog
         let cell = collectionView.cellForItem(at: indexPath) as! CatalogCollectionViewCell
         //let index = cell.cellIndex
         if cellStating == .nomale {
-            //正常状态 点击cell 切换页面
-//            if index == self.data.count-1 {
-//              //  popFolderView()
-//                addCell()
-//            }
             if cell.cellStyle == .cellDefault{
                 addCell()
             }
             
         }else{
-            //删除状态 点击cell 删除cell
+            //编辑状态点击cell
             let key = Int((cell.dataModel?.key)!)
-            if cell.cellStyle == .cellCustom{
-                self.delelteCellAction(indexPath,id: key!)
-            }else{
-                Tool.log("默认不能被删除")
-            }
+            editCellView(cell: cell)
+//            if cell.cellStyle == .cellCustom{
+//                self.delelteCellAction(indexPath,id: key!)
+//            }else{
+//                Tool.log("默认不能被删除")
+//            }
             
         }
         
         return true
+    }
+    //编辑点击的cell
+    func editCellView(cell:CatalogCollectionViewCell){
+        
+//        iconListView = IconList(inView: view)
+//        iconListView.selectItem = {index in
+//            print("add \(index)")
+//           // self.items.append(index)
+//           // self.tableView.reloadData()
+//            //self.actionToggleMenu(self)
+//        }
+//        self.view.addSubview(iconListView)
     }
    //点击添加cell的按钮
     func addCell() {
@@ -170,19 +182,21 @@ class CatalogCollectionViewController: UICollectionViewController,UIGestureRecog
             
         }
     }
-    //MARK:删除文件夹
-    @IBAction func deleteCell(_ sender: AnyObject) {
+    //MARK:编辑文件夹的名字与背景图片
+    @IBAction func editCell(_ sender: AnyObject) {
         if self.cellStating == .nomale {
-            self.cellStating = .delete
+            //进入编辑状态
+            cellStating = .edit
             (sender as! UIButton).setTitle("列表", for: .normal)
         }else{
             self.cellStating = .nomale
-            (sender as! UIButton).setTitle("删除", for: .normal)
+            (sender as! UIButton).setTitle("编辑", for: .normal)
         }
         
-        for var decell:UICollectionViewCell in (self.collectionView?.visibleCells)!{
-            (decell as! CatalogCollectionViewCell).deleteStyle()
-        }
+        // 删除 稍后修改
+//        for var decell:UICollectionViewCell in (self.collectionView?.visibleCells)!{
+//            (decell as! CatalogCollectionViewCell).deleteStyle()
+//        }
     }
     
     func addFolder(_ name:FolderModel) {
@@ -192,6 +206,7 @@ class CatalogCollectionViewController: UICollectionViewController,UIGestureRecog
     }
     //MARK:更新文件夹名 或 背景图片
     func updateFolder(_ name:String){
+        
         Tool.log(name)
     }
     //
@@ -203,6 +218,7 @@ class CatalogCollectionViewController: UICollectionViewController,UIGestureRecog
             fold.folderData = (cell as! CatalogCollectionViewCell).dataModel
         }
     }
+    
     //MARK:添加长按手势
     func addGesture() {
         let gesture = UILongPressGestureRecognizer.init(target: self, action: #selector(cellLongGesture(_:)))
@@ -212,6 +228,8 @@ class CatalogCollectionViewController: UICollectionViewController,UIGestureRecog
         self.collectionView?.addGestureRecognizer(gesture)
         
     }
+    
+    // 修改长按为删除cell
     //触发长按手势 弹出 alertView视图编辑当前的cell
     func cellLongGesture(_ gesture:UILongPressGestureRecognizer) {
         if gesture.state != .ended {
@@ -229,10 +247,11 @@ class CatalogCollectionViewController: UICollectionViewController,UIGestureRecog
     // 编辑cell的alterView
     func setFoldercell(_ cell:CatalogCollectionViewCell) {
         let editView = EditFolderViewController.init(title: "编辑分类", message: nil, preferredStyle: .alert)
-        let tit = cell.title.text
+        let tit = cell.titleText.text
         editView.addTextField { (text) in
             text.placeholder = tit
         }
+        
         //修过cell背景
         
         let cancelAction = UIAlertAction.init(title: "取消", style: .cancel)

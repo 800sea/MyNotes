@@ -28,8 +28,12 @@ class TextEditorViewController: UIViewController,UITextViewDelegate{
     //MARK:保存
     @IBAction func saveFuc(_ sender: UIButton) {
         contView.resignFirstResponder()
+        
     }
-    
+    //点击空白处键盘消失
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        contView.resignFirstResponder()
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

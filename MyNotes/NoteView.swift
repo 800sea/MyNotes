@@ -37,13 +37,7 @@ class NoteView: UIView,RoundDeletage {
     func creatRound() {
         roundView = RoundView(frame: CGRect.init(x: 0, y: 0, width: 60, height: 60))
         self.addSubview(roundView!)
-        
-//        roundView?.mas_makeConstraints({ (make) in
-//            make?.right.equalTo()(self.mas_right)?.setOffset(-30)
-//            make?.top.equalTo()(self.mas_top)?.setOffset(0)
-//            
-//            
-//        })
+
         addTextView()
     }
     func addTextView(){
@@ -56,12 +50,6 @@ class NoteView: UIView,RoundDeletage {
         textView.autoresizingMask = .flexibleHeight
         textView.text = "24234234"
         textView.layer.anchorPoint = CGPoint.init(x: 1, y: 0)
-       // textView.textContainerInset = UIEdgeInsetsMake(10, 5, 5, 20)
-        //显示内容
-        //self.setNeedsDisplay()
-//        textView.isEditable = true
-       //
-        //textView.isFirstResponder = true
     }
     //MARK:圆形的点击代理事件
     func roundClick() {
@@ -71,7 +59,6 @@ class NoteView: UIView,RoundDeletage {
         if textViewStyle && (textView.superview == nil) {
             self.addSubview(textView)
             self.insertSubview(textView, at: 0)
-            //self.bounds = CGRect.init(x: 0, y: 0, width: 300, height: 500)
             UIView.animate(withDuration: 0.5) {
                 self.textView.bounds = CGRect.init(x: 0, y: 0, width: 200, height: 100)
             }

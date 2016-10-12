@@ -18,12 +18,14 @@
 		92113C9C1D8FB57600919367 /* CatalogCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92113C9B1D8FB57600919367 /* CatalogCollectionViewController.swift */; };
 		92113C9F1D8FC95600919367 /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92113C9E1D8FC95600919367 /* Catalog.swift */; };
 		92113CA61D90110700919367 /* CatalogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92113CA51D90110700919367 /* CatalogCollectionViewCell.swift */; };
+		9211A77E1DAC6A39003F591A /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9211A77D1DAC6A39003F591A /* CatalogViewController.swift */; };
 		9211B0CB1D9A4C09002F39A0 /* FileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9211B0CA1D9A4C09002F39A0 /* FileViewController.swift */; };
 		92123A711D9E98EF0041A738 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92123A701D9E98EF0041A738 /* NoteView.swift */; };
 		9212A6E71D95202F00007CEA /* DBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9212A6E61D95202F00007CEA /* DBClient.swift */; };
 		9212F9931DA77D490049AFF1 /* TextEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9212F9921DA77D490049AFF1 /* TextEditorViewController.swift */; };
 		9212F9951DA77DA50049AFF1 /* WordPressEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9212F9941DA77DA50049AFF1 /* WordPressEditor.framework */; };
 		9212F9971DA77E450049AFF1 /* WordPressComAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9212F9961DA77E450049AFF1 /* WordPressComAnalytics.framework */; };
+		9214A1121DABC3CD008DD486 /* IconList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9214A1111DABC3CD008DD486 /* IconList.swift */; };
 		921771981D9216F000904B64 /* RootCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921771971D9216EF00904B64 /* RootCollectionTests.swift */; };
 		9217BD1B1D98079A00CF60E4 /* FolderTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9217BD1A1D98079A00CF60E4 /* FolderTable.swift */; };
 		9218FD201DA09C30002BFF28 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9218FD1F1DA09C30002BFF28 /* RoundView.swift */; };
@@ -76,12 +78,14 @@
 		92113C9B1D8FB57600919367 /* CatalogCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogCollectionViewController.swift; sourceTree = "<group>"; };
 		92113C9E1D8FC95600919367 /* Catalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
 		92113CA51D90110700919367 /* CatalogCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogCollectionViewCell.swift; sourceTree = "<group>"; };
+		9211A77D1DAC6A39003F591A /* CatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
 		9211B0CA1D9A4C09002F39A0 /* FileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
 		92123A701D9E98EF0041A738 /* NoteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		9212A6E61D95202F00007CEA /* DBClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBClient.swift; sourceTree = "<group>"; };
 		9212F9921DA77D490049AFF1 /* TextEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextEditorViewController.swift; sourceTree = "<group>"; };
 		9212F9941DA77DA50049AFF1 /* WordPressEditor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WordPressEditor.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/MyNotes-hacgixtvmswkbjdlhunoiwjxujpg/Build/Products/Debug-iphonesimulator/WordPressEditor.framework"; sourceTree = "<group>"; };
 		9212F9961DA77E450049AFF1 /* WordPressComAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WordPressComAnalytics.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/MyNotes-hacgixtvmswkbjdlhunoiwjxujpg/Build/Products/Debug-iphonesimulator/WordPressComAnalytics.framework"; sourceTree = "<group>"; };
+		9214A1111DABC3CD008DD486 /* IconList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconList.swift; sourceTree = "<group>"; };
 		921771971D9216EF00904B64 /* RootCollectionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootCollectionTests.swift; sourceTree = "<group>"; };
 		921771991D92532200904B64 /* Note-Brigding-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Note-Brigding-Header.h"; sourceTree = "<group>"; };
 		9217BD1A1D98079A00CF60E4 /* FolderTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderTable.swift; sourceTree = "<group>"; };
@@ -209,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				92113CA51D90110700919367 /* CatalogCollectionViewCell.swift */,
+				9214A1111DABC3CD008DD486 /* IconList.swift */,
 				9218FD1E1DA09BF9002BFF28 /* NoteView */,
 				921BE76A1D941F9400C74C1B /* FolderTableViewCell.swift */,
 			);
@@ -223,6 +228,7 @@
 				92113C9B1D8FB57600919367 /* CatalogCollectionViewController.swift */,
 				921A97261D915A60000CF924 /* EditFolderViewController.swift */,
 				9212F9921DA77D490049AFF1 /* TextEditorViewController.swift */,
+				9211A77D1DAC6A39003F591A /* CatalogViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -471,6 +477,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9211A77E1DAC6A39003F591A /* CatalogViewController.swift in Sources */,
 				9217BD1B1D98079A00CF60E4 /* FolderTable.swift in Sources */,
 				92113C9C1D8FB57600919367 /* CatalogCollectionViewController.swift in Sources */,
 				921BE76B1D941F9400C74C1B /* FolderTableViewCell.swift in Sources */,
@@ -478,6 +485,7 @@
 				921A97221D90CA2D000CF924 /* FolderTableViewController.swift in Sources */,
 				92113C6D1D8F796A00919367 /* AppDelegate.swift in Sources */,
 				92D6B02E1D98B3EB005A058A /* HttpTool.swift in Sources */,
+				9214A1121DABC3CD008DD486 /* IconList.swift in Sources */,
 				9211B0CB1D9A4C09002F39A0 /* FileViewController.swift in Sources */,
 				9212F9931DA77D490049AFF1 /* TextEditorViewController.swift in Sources */,
 				921BE7691D93E35700C74C1B /* FolderModel.swift in Sources */,
