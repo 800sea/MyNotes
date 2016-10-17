@@ -36,7 +36,7 @@ class CatalogViewController: UIViewController,UICollectionViewDelegate, UICollec
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: cellStyleNotification.name), object: self, userInfo: [cellStyleNotification.infoKey:cellStating])
             //退出编辑状态时
             if cellStating == .nomale {
-                
+            
             }
         }
     }
@@ -200,10 +200,11 @@ class CatalogViewController: UIViewController,UICollectionViewDelegate, UICollec
 //        targetEditCell?.titleText.resignFirstResponder()
 //    }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true;
-    }
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        textField.resignFirstResponder()
+//        return true;
+//    }
+    
     //点击添加cell的按钮
     func addCell() {
         let alertView = UIAlertController.init(title: "添加分类", message: "", preferredStyle: .alert)
@@ -279,7 +280,6 @@ class CatalogViewController: UIViewController,UICollectionViewDelegate, UICollec
         if catalog.updateFolderData(model){
             Tool.log("更新成功")
         }
-        //Tool.log(name)
     }
 
 

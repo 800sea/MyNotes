@@ -15,7 +15,6 @@
 		92113C771D8F796A00919367 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92113C751D8F796A00919367 /* LaunchScreen.storyboard */; };
 		92113C821D8F796A00919367 /* MyNotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92113C811D8F796A00919367 /* MyNotesTests.swift */; };
 		92113C8D1D8F796A00919367 /* MyNotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92113C8C1D8F796A00919367 /* MyNotesUITests.swift */; };
-		92113C9C1D8FB57600919367 /* CatalogCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92113C9B1D8FB57600919367 /* CatalogCollectionViewController.swift */; };
 		92113C9F1D8FC95600919367 /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92113C9E1D8FC95600919367 /* Catalog.swift */; };
 		92113CA61D90110700919367 /* CatalogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92113CA51D90110700919367 /* CatalogCollectionViewCell.swift */; };
 		9211A77E1DAC6A39003F591A /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9211A77D1DAC6A39003F591A /* CatalogViewController.swift */; };
@@ -75,7 +74,6 @@
 		92113C881D8F796A00919367 /* MyNotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyNotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92113C8C1D8F796A00919367 /* MyNotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNotesUITests.swift; sourceTree = "<group>"; };
 		92113C8E1D8F796A00919367 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92113C9B1D8FB57600919367 /* CatalogCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogCollectionViewController.swift; sourceTree = "<group>"; };
 		92113C9E1D8FC95600919367 /* Catalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
 		92113CA51D90110700919367 /* CatalogCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogCollectionViewCell.swift; sourceTree = "<group>"; };
 		9211A77D1DAC6A39003F591A /* CatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
@@ -225,7 +223,6 @@
 			children = (
 				921A97211D90CA2D000CF924 /* FolderTableViewController.swift */,
 				9211B0CA1D9A4C09002F39A0 /* FileViewController.swift */,
-				92113C9B1D8FB57600919367 /* CatalogCollectionViewController.swift */,
 				921A97261D915A60000CF924 /* EditFolderViewController.swift */,
 				9212F9921DA77D490049AFF1 /* TextEditorViewController.swift */,
 				9211A77D1DAC6A39003F591A /* CatalogViewController.swift */,
@@ -479,7 +476,6 @@
 			files = (
 				9211A77E1DAC6A39003F591A /* CatalogViewController.swift in Sources */,
 				9217BD1B1D98079A00CF60E4 /* FolderTable.swift in Sources */,
-				92113C9C1D8FB57600919367 /* CatalogCollectionViewController.swift in Sources */,
 				921BE76B1D941F9400C74C1B /* FolderTableViewCell.swift in Sources */,
 				9218FD201DA09C30002BFF28 /* RoundView.swift in Sources */,
 				921A97221D90CA2D000CF924 /* FolderTableViewController.swift in Sources */,

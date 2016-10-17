@@ -28,10 +28,9 @@ class IconList: UIScrollView {
         self.init(frame: rect)
         
         self.alpha = 0.0
-        
+        var image: UIImage?
         for i in 1 ..< 15 {
-            //UIImage.init(named: <#T##String#>)
-            let image = UIImage.init(named: "icon_\(i).png")
+            image = UIImage.init(named: "icon_\(i).png")
             let imageView  = UIImageView(image: image)
             imageView.bounds = CGRect.init(x: 0, y: 0, width: btnWidth, height: btnWidth)
             imageView.contentMode = .scaleAspectFit
